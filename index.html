@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RG Dental · Consultorio dental</title>
+    <meta
+      name="description"
+      content="RG Dental, consultorio del Dr. José Ricardo Gómez Gómez. Prótesis, limpieza dental, extracciones, ortodoncia, amalgamas y resinas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("rg-dental-theme");
+        var prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      })();
+    </script>
+  </head>
+  <body class="bg-canvas text-ink dark:bg-canvas-dark dark:text-paper font-body antialiased transition-colors">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
